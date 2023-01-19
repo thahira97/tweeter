@@ -8,7 +8,8 @@ background-image: url("https://www.transparenttextures.com/patterns/diagmonds.pn
   display: flex;
   justify-content: space-between;
   position: fixed;
-  z-index: 1;
+  /* z-index: 1; */
+  overflow: hidden;
  
 }
 

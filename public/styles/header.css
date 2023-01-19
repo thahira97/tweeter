@@ -4,8 +4,6 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column;
-
-  position: absolute;
   background-color: #006dcc;
   background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
   
