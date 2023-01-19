@@ -1,0 +1,24 @@
+nav {
+  height: 120px;
+  width:auto;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+}
+
+span {
+  font-family: 'Bungee';
+  margin: 1.5em;
+}
+div {
+  margin: 1.5em;
+  
+}
+div .icon {
+  margin: auto;
+  width: 50%;
+  color: red;
+  padding: 0px;
+  margin-right: 10px;
+}
