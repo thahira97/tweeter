@@ -1,11 +1,15 @@
 nav {
   height: 120px;
-  width:auto;
-  background-color: #4056A1;
+  width: 100%;
+  /* background-color: #4056A1; */
+  background-color: #006dcc;
+background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
   color: #FFFFFF;
   display: flex;
   justify-content: space-between;
   position: fixed;
+  z-index: 1;
+ 
 }
 
 span {
