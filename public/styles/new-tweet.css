@@ -19,7 +19,10 @@
   padding-top: 10px;
   width: 100%;
   display:flex;
-  justify-content: space-between;
+  flex-direction: column;
   border-bottom: solid #006dcc;
-  text-align: center;
+}
+textarea {
+  border-color:  #f4f1ec;
+  background-color:  #f4f1ec;
 }
