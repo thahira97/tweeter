@@ -1,6 +1,5 @@
 $(document).ready(function() {
-  const $blur = $('textarea').on('input', function(){
-    console.log(this);
+  const $character = $('textarea').on('input', function(){
+      console.log(140-this.value.length) 
   })
-
 });
