@@ -21,6 +21,7 @@ body {
   font-family: 'Source Sans Pro', sans-serif;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 /*
@@ -30,5 +31,7 @@ body {
  main {
   width: 90%;
   background-color: #f4f1ec;
-  flex-direction: column;
+  display: flex;
+  /* margin: 10px;
+  padding-left: 20px; */
  }

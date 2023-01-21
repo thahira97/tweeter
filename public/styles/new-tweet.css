@@ -1,0 +1,25 @@
+.new-tweet {
+  width: 100%;
+
+}
+.button-counter {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee';
+  padding-top: 10px;
+}
+.tweet-button {
+  background-color: #006dcc;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
+  color:  #FFFFFF;
+}
+.humming {
+  padding-top: 10px;
+  width: 100%;
+  display:flex;
+  justify-content: space-between;
+  border-bottom: solid #006dcc;
+  text-align: center;
+}
