@@ -45,40 +45,51 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script src="/scripts/composer-char-counter.js"></script>
   </head>
-
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
-      <span>Tweeter</span>
+      <span class="heading">Tweeter</span>
 
-      <div><b>Write</b> a new tweet
-       <div class="icon"><i class="fa-solid fa-angles-down"></i></div>
-      
+      <div class="right-header">
+        <b>Write</b> a new tweet
+        <div class="icon"><i class="fa-solid fa-angles-down"></i></div>
       </div>
-     
     </nav>
-    <header>
+    <header class="identity">
       <div class="avatar">
-          <img id = "profile-pic" src="/images/profile-hex.png"> 
+        <img class="profile-pic" src="/images/profile-hex.png" />
       </div>
       <div class="name">
-          <h2>Thahira</h2>
+        <h2>Thahira</h2>
       </div>
-  </header>  
+    </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
         <form method="POST" action="/tweets/">
-          <aside class ="humming">
-          <label for="tweet-text"><b>What are you humming about?</b></label>
-          <textarea name="text" id="tweet-text"></textarea>
+          <aside class="humming">
+            <label for="tweet-text"><b>What are you humming about?</b></label>
+            <textarea name="text" id="tweet-text"></textarea>
           </aside>
-          <div class = "button-counter">
-            <button type="submit" class ="tweet-button">Tweet</button>
+          <div class="button-counter">
+            <button type="submit" class="tweet-button">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+      <section id="tweet-container">
+        <article class="tweet">
+          <header>
+            <h2>Name</h2>
+            <h2>ID</h2>
+          </header>
+          <p>Hello World!</p>
+          <footer>
+            <h3>Date</h3>
+          </footer>
+        </article>
       </section>
     </main>
   </body>

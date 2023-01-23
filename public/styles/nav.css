@@ -10,14 +10,13 @@ background-image: url("https://www.transparenttextures.com/patterns/diagmonds.pn
   position: fixed;
   /* z-index: 1; */
   overflow: hidden;
- 
 }
 
-span {
+.heading {
   font-family: 'Bungee';
   margin: 1.5em;
 }
-div {
+.right-header {
   margin: 1.5em;
   
 }

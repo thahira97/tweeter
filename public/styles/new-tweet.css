@@ -1,6 +1,5 @@
 .new-tweet {
   width: 100%;
-
 }
 .button-counter {
   width: 100%;
@@ -25,4 +24,12 @@
 textarea {
   border-color:  #f4f1ec;
   background-color:  #f4f1ec;
+}
+.counter {
+  color: #084982
+}
+
+#tweet-container {
+  display: flex;
+  border: solid red;
 }
