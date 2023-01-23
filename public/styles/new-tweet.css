@@ -1,6 +1,20 @@
 .new-tweet {
   width: 100%;
 }
+/* Top-Container */
+.question {
+  padding-top: 10px;
+  width: 100%;
+  display:flex;
+  flex-direction: column;
+  border-bottom: solid  #084982;
+}
+textarea {
+  border-color:  #f4f1ec;
+  background-color:  #f4f1ec;
+}
+
+/* Button and Counter */
 .button-counter {
   width: 100%;
   margin: auto;
@@ -18,21 +32,11 @@
 .tweet-button:hover {
   cursor: pointer;
 }
-.humming {
-  padding-top: 10px;
-  width: 100%;
-  display:flex;
-  flex-direction: column;
-  border-bottom: solid  #084982;
-}
-textarea {
-  border-color:  #f4f1ec;
-  background-color:  #f4f1ec;
-}
 .counter {
-  color: #084982
+  color: #084982;
 }
 
+/* Tweets */
 #tweet-container {
   display: flex;
   flex-direction: column;
@@ -50,10 +54,19 @@ div.username {
   font-weight: 30;
 }
 
+.user-id {
+  opacity: 0.5;
+ }
+ 
 .tweet-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+div.tweet-text {
+  padding-top: 20px;;
+  padding-bottom: 25px;
+  border-bottom: solid #084982;
 }
 .tweet-footer {
   display: flex;
@@ -62,11 +75,6 @@ div.username {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: medium;
-}
-div.tweet-text {
-  padding-top: 20px;;
-  padding-bottom: 25px;
-  border-bottom: solid #084982;
 }
 .tweet-actions {
   width: 6%;
@@ -82,8 +90,4 @@ color: goldenrod;
 }
 .fa-heart:hover {
   color: #ae2516;
-}
-
-.user-id {
- opacity: 0.5;
 }

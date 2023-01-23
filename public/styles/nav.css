@@ -1,7 +1,6 @@
 nav {
   height: 120px;
   width: 100%;
-  /* background-color: #4056A1; */
   background-color: #006dcc;
 background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
   color: #FFFFFF;
@@ -18,7 +17,6 @@ background-image: url("https://www.transparenttextures.com/patterns/diagmonds.pn
 }
 .right-header {
   margin: 1.5em;
-  
 }
 div .icon {
   margin: auto;

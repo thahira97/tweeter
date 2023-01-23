@@ -6,5 +6,8 @@ $(document).ready(function () {
     if (counter.value <= 0) {
       $(counter).css("color", "red");
     }
+    else {
+      $(counter).css("color", "#084982");
+    }
   });
  });
