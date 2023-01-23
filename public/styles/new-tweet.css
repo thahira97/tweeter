@@ -19,7 +19,7 @@
   width: 100%;
   display:flex;
   flex-direction: column;
-  border-bottom: solid #006dcc;
+  border-bottom: solid  #084982;
 }
 textarea {
   border-color:  #f4f1ec;
@@ -31,5 +31,35 @@ textarea {
 
 #tweet-container {
   display: flex;
+  flex-direction: column;
   border: solid red;
+  margin-top: 50px;
+  border: solid  #084982;
+  padding: 10px;
+  padding-left: 20px;;
+}
+.tweet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tweet-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: medium;
+}
+div.tweet-text {
+  padding-top: 20px;;
+  padding-bottom: 25px;
+  border-bottom: solid #084982;
+  font-weight: 500;
+}
+.tweet-actions {
+  color: #084982;
+}
+.user-id {
+ opacity: 0.5;
 }
