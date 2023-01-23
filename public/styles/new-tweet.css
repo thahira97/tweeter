@@ -15,6 +15,9 @@
   border: 0;
   color:  #FFFFFF;
 }
+.tweet-button:hover {
+  cursor: pointer;
+}
 .humming {
   padding-top: 10px;
   width: 100%;
