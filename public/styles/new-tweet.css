@@ -70,6 +70,16 @@ div.tweet-text {
   justify-content: space-between;
   color: #084982;
 }
+.fa-flag:hover{
+color: goldenrod;
+}
+.fa-retweet:hover {
+  color: goldenrod;
+}
+.fa-heart:hover {
+  color: #ae2516;
+}
+
 .user-id {
  opacity: 0.5;
 }
