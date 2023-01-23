@@ -43,7 +43,9 @@ textarea {
 #tweet-container:hover {
   box-shadow: 10px 5px 5px grey;
 }
-
+div.username {
+  font-weight: 30;
+}
 
 .tweet-header {
   display: flex;
@@ -62,7 +64,6 @@ div.tweet-text {
   padding-top: 20px;;
   padding-bottom: 25px;
   border-bottom: solid #084982;
-  font-weight: 500;
 }
 .tweet-actions {
   width: 6%;
