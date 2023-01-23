@@ -12,6 +12,7 @@
 .tweet-button {
   background-color: #006dcc;
   background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
+  border: 0;
   color:  #FFFFFF;
 }
 .humming {
@@ -36,8 +37,14 @@ textarea {
   margin-top: 50px;
   border: solid  #084982;
   padding: 10px;
-  padding-left: 20px;;
+  padding-left: 20px;
+ 
 }
+#tweet-container:hover {
+  box-shadow: 10px 5px 5px grey;
+}
+
+
 .tweet-header {
   display: flex;
   align-items: center;
@@ -58,6 +65,9 @@ div.tweet-text {
   font-weight: 500;
 }
 .tweet-actions {
+  width: 6%;
+  display: flex;
+  justify-content: space-between;
   color: #084982;
 }
 .user-id {
