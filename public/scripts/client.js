@@ -62,9 +62,13 @@ $(document).ready(function () {
     return $tweet;
   };
 /////Event Listener for Submit form
-$('.new-tweet').submit(function(event){
+const $form = $('.new-tweetform')
+$form.submit(function(event){
  event.preventDefault();
+ const queryString = $form.serialize()
+ console.log(queryString)
 });
+///To do the post request 
 
 
 
