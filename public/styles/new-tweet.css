@@ -37,7 +37,7 @@ textarea {
 }
 
 /* Tweets */
-#tweet-container {
+.tweet {
   display: flex;
   flex-direction: column;
   border: solid red;
@@ -47,7 +47,7 @@ textarea {
   padding-left: 20px;
  
 }
-#tweet-container:hover {
+.tweet:hover {
   box-shadow: 10px 5px 5px grey;
 }
 div.username {
