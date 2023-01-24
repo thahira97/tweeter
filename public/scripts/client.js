@@ -30,16 +30,16 @@ $(document).ready(function () {
   ];
   ///Function to render the tweets
   const renderTweets = function (tweets) {
-    const $tweetsContainer = $("#tweets-container")
+    const $tweetsContainer = $("#tweets-container");
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
       $tweetsContainer.prepend($tweet);
     }
   };
-  
+
   ///Function to create one tweet
   const createTweetElement = function (tweet) {
-    let $tweet= `<article class="tweet">
+    let $tweet = `<article class="tweet">
    <header class="tweet-header">
      <div class="username">
        <span><img src = ${tweet.user["avatars"]}</span>
@@ -61,20 +61,16 @@ $(document).ready(function () {
  </article>`;
     return $tweet;
   };
-/////Event Listener for Submit form
-const $form = $('.new-tweetform')
-$form.submit(function(event){
- event.preventDefault();
- const queryString = $form.serialize()
- console.log(queryString)
-});
-///To do the post request 
-
-
-
-
-
-
+  /////Event Listener for Submit form and Ajax request for post
+  const $form = $(".new-tweetform");
+  $form.submit(function (event) {
+    event.preventDefault();
+    const queryString = $form.serialize();
+    // console.log(queryString);
+    $.post("/tweets", queryString, (response) => {
+      console.log(queryString);
+    });
+  });
 
   renderTweets(data);
 });
