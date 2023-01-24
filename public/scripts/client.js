@@ -61,6 +61,16 @@ $(document).ready(function () {
  </article>`;
     return $tweet;
   };
+/////Event Listener for Submit form
+$('.new-tweet').submit(function(event){
+ event.preventDefault();
+});
+
+
+
+
+
+
 
   renderTweets(data);
 });
