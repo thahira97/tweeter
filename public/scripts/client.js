@@ -65,33 +65,33 @@ $(document).ready(function () {
    /////Event Listener for Submit form and Ajax request for post
   const $form = $(".new-tweetform");
   $form.submit(function (event) {
+     
     event.preventDefault();  
     const data = $form.serialize();
-    // console.log(data);
+   
         //Checking the form Validations::
           const $tweetInput = $('#tweet-text').val();
           if ($tweetInput.length > 140)
           alert("Please tweet within the limited characters");
-          else if (!$tweetInput){
+          if (!$tweetInput){
            alert("No Characters");
           }
-          else if ($tweetInput.length <= 140 && $tweetInput)
+          if ($tweetInput.length <= 140 && $tweetInput)
+          
           $.post("/tweets", data)
+           .then(()=>{
+            $form.trigger("reset");
+            loadTweets()
+           })
+          
   });
   ////Function to fetch tweets
   const loadTweets = function () {
-    ///Triggering the button
-    const $tweetButton = $(".tweet-button");
-    $tweetButton.on("click", function () {
-      //to get using ajax
-
       $.get("http://localhost:8080/tweets")
         .then((response) => {
           // console.log(response)
          renderTweets(response)
         });
-    });
   };
-  loadTweets();
-  // renderTweets(data);
+
 });
