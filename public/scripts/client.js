@@ -61,15 +61,22 @@ $(document).ready(function () {
  </article>`;
     return $tweet;
   };
-  /////Event Listener for Submit form and Ajax request for post
+
+   /////Event Listener for Submit form and Ajax request for post
   const $form = $(".new-tweetform");
   $form.submit(function (event) {
-    event.preventDefault();
-    const queryString = $form.serialize();
-    // console.log(queryString);
-    $.post("/tweets", queryString, (response) => {
-      console.log(queryString);
-    });
+    event.preventDefault();  
+    const data = $form.serialize();
+    // console.log(data);
+        //Checking the form Validations::
+          const $tweetInput = $('#tweet-text').val();
+          if ($tweetInput.length > 140)
+          alert("Please tweet within the limited characters");
+          else if (!$tweetInput){
+           alert("No Characters");
+          }
+          else if ($tweetInput.length <= 140 && $tweetInput)
+          $.post("/tweets", data)
   });
   ////Function to fetch tweets
   const loadTweets = function () {
