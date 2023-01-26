@@ -3,11 +3,12 @@
 }
 /* Top-Container */
 .question {
-  padding-top: 10px;
+  padding-top: 40px;
   width: 100%;
+  opacity: 0.8;
   display:flex;
   flex-direction: column;
-  border-bottom: solid  #084982;
+  border-bottom: solid 2px #084982;
 }
 textarea {
   border-color:  #f4f1ec;
@@ -27,12 +28,18 @@ textarea {
   background-color: #006dcc;
   background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
   border: 0;
-  color:  #FFFFFF;
+  border-radius: 5px;
+  color:  #FFFFFF; 
+   font-size: 20px; 
+   padding: 8px;
+   line-height: 20px;
+  font-weight: 600; 
 }
 .tweet-button:hover {
   cursor: pointer;
 }
 .counter {
+  padding: 8px;
   color: #084982;
 }
 
@@ -40,15 +47,16 @@ textarea {
 .tweet {
   display: flex;
   flex-direction: column;
-  border: solid red;
   margin-top: 50px;
-  border: solid  #084982;
+  border: 1px solid  #084982;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
   padding: 10px;
   padding-left: 20px;
  
 }
 .tweet:hover {
-  box-shadow: 10px 5px 5px grey;
+  box-shadow: 10px 5px 5px #C2C2C7;
 }
 div.username {
   font-weight: 30;
@@ -66,7 +74,7 @@ div.username {
 div.tweet-text {
   padding-top: 20px;;
   padding-bottom: 25px;
-  border-bottom: solid #084982;
+  border-bottom: solid 2px #084982;
 }
 .tweet-footer {
   display: flex;
