@@ -48,7 +48,7 @@ $(document).ready(function () {
      <p class="user-id">${tweet.user["handle"]}</p>
    </header>
    <div class="tweet-text">
-   ${tweet.content["text"]}
+    ${escape(tweet.content["text"])} 
    </div>
    <footer class="tweet-footer">
      <aside>${timeago.format(tweet.created_at)}</aside>
@@ -60,6 +60,12 @@ $(document).ready(function () {
    </footer>
  </article>`;
     return $tweet;
+  };
+  //// Function for cross site scripting
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
   };
 
    /////Event Listener for Submit form and Ajax request for post
