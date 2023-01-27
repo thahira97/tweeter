@@ -69,6 +69,11 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <p class="error-message">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          Too-long.Please respect our arbitrary limit of 140 characters.
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </p>
         <form method="POST" action="/tweets/" class="new-tweetform">
           <aside class="question">
             <label for="tweet-text"><b>What are you humming about?</b></label>

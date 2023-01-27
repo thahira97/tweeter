@@ -3,7 +3,7 @@
 }
 /* Top-Container */
 .question {
-  padding-top: 40px;
+  /* padding-top: 40px; */
   width: 100%;
   opacity: 0.8;
   display:flex;
@@ -98,4 +98,13 @@ color: goldenrod;
 }
 .fa-heart:hover {
   color: #ae2516;
+}
+
+/* Error-message */
+p.error-message {
+  color: red;
+  border: solid 2px red;
+  text-align: center;
+  padding: 25px;
+  visibility: hidden;
 }
