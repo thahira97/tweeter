@@ -68,36 +68,33 @@ $(document).ready(function () {
     return div.innerHTML;
   };
 
-   /////Event Listener for Submit form and Ajax request for post
+  /////Event Listener for Submit form and Ajax request for post
   const $form = $(".new-tweetform");
   $form.submit(function (event) {
-     
-    event.preventDefault();  
+    event.preventDefault();
     const data = $form.serialize();
-   
-        //Checking the form Validations::
-          const $tweetInput = $('#tweet-text').val();
-          if ($tweetInput.length > 140)
-          alert("Please tweet within the limited characters");
-          if (!$tweetInput){
-           alert("No Characters");
-          }
-          if ($tweetInput.length <= 140 && $tweetInput)
-          
-          $.post("/tweets", data)
-           .then(()=>{
-            $form.trigger("reset");
-            loadTweets()
-           })
-          
+
+    //Checking the form Validations::
+    const $tweetInput = $("#tweet-text").val();
+    const $longError = $(".long-error");
+    const $shortError = $(".short-error");
+    if ($tweetInput.length > 140) {
+      $longError.css("display", "block").fadeOut(4000);
+    }
+    if (!$tweetInput) {
+      $shortError.css("display", "block").fadeOut(4000);
+    }
+    if ($tweetInput.length <= 140 && $tweetInput)
+      $.post("/tweets", data).then(() => {
+        $form.trigger("reset");
+        loadTweets();
+      });
   });
   ////Function to fetch tweets
   const loadTweets = function () {
-      $.get("http://localhost:8080/tweets")
-        .then((response) => {
-          // console.log(response)
-         renderTweets(response)
-        });
+    $.get("http://localhost:8080/tweets").then((response) => {
+      // console.log(response)
+      renderTweets(response);
+    });
   };
-
 });

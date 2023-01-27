@@ -3,7 +3,7 @@
 }
 /* Top-Container */
 .question {
-  /* padding-top: 40px; */
+  padding-top: 40px;
   width: 100%;
   opacity: 0.8;
   display:flex;
@@ -100,11 +100,21 @@ color: goldenrod;
   color: #ae2516;
 }
 
-/* Error-message */
-p.error-message {
+/* Error-messages */
+.long-error {
   color: red;
   border: solid 2px red;
+  margin: 5px 5px ;
   text-align: center;
-  padding: 25px;
-  visibility: hidden;
+  padding: 20px;
+  /* visibility: hidden; */
+  display: none;
+}
+.short-error {
+  color: red;
+  border: solid 2px red;
+  margin: 5px 5px ;
+  text-align: center;
+  padding: 20px;
+  display: none;
 }

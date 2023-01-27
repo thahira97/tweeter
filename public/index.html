@@ -69,9 +69,14 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <p class="error-message">
+        <p class="long-error">
           <i class="fa-solid fa-triangle-exclamation"></i>
           Too-long.Please respect our arbitrary limit of 140 characters.
+          <i class="fa-solid fa-triangle-exclamation"></i>
+        </p>
+        <p class="short-error">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          Too-short.Please input some characters.
           <i class="fa-solid fa-triangle-exclamation"></i>
         </p>
         <form method="POST" action="/tweets/" class="new-tweetform">
