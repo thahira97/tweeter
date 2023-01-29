@@ -33,6 +33,7 @@ $(document).ready(function () {
     const $tweetsContainer = $("#tweets-container");
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
+      // $tweetsContainer.empty();
       $tweetsContainer.prepend($tweet);
     }
   };
@@ -97,4 +98,9 @@ $(document).ready(function () {
       renderTweets(response);
     });
   };
+
+  ////jQuery to form toggle events(stretch)
+  $(".new-button").click(function () {
+      $(".new-tweet").slideDown("slow").css("display", "block");
+  });
 });

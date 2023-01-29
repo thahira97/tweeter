@@ -36,5 +36,13 @@ div .icon {
     100% { transform:translateY(0); }
 }
 
-  
-  
+  .new-button {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #084982;
+    color: #FFFFFF;
+  }
+  .new-button:hover {
+    cursor: pointer;
+  }
