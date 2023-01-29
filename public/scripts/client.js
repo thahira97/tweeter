@@ -101,6 +101,37 @@ $(document).ready(function () {
 
   ////jQuery to form toggle events(stretch)
   $(".new-button").click(function () {
+    $(".icon").replaceWith($("<i class = 'fa-solid fa-angles-up '><i/>"))
+    $(".scroll-button").fadeOut(1000)
       $(".new-tweet").slideDown("slow").css("display", "block");
+      
+     
   });
+////Scroll events
+// $(window).scroll(function (){
+//   $(".scroll-button").css("display", "block")
+//   $(".scroll-button").click(function(){
+//     window.scrollTo({ top: 0, behavior: 'smooth' })
+//     $(".new-tweet").slideDown("slow").css("display", "block");
+//     $(".scroll-button").fadeOut(1000)
+//   })
+// })
+
+$(window).scroll(function(){
+
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+   $(".scroll-button").css("display", "block")
+  } else {
+    $(".scroll-button").css("display", "none")
+  }
+
+})
+
+///When the user clicks on the button, scroll to the top 
+
+$(".scroll-button").click(function(){
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+      $(".new-tweet").slideDown("slow").css("display", "block");
+      $(".scroll-button").fadeOut(1000)
+    })
 });

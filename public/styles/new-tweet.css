@@ -119,3 +119,19 @@ color: goldenrod;
   padding: 20px;
   display: none;
 }
+
+
+.scroll-button {
+  position: fixed;
+  bottom: 0.5em;
+  right: 0;
+  display: none;
+  padding: 5px;
+  background-color:  #006dcc;
+  color: white;
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+  border-radius: 40%;
+  border: 0;
+}

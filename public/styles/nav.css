@@ -18,7 +18,7 @@ background-image: url("https://www.transparenttextures.com/patterns/diagmonds.pn
 .right-header {
   margin: 1.5em;
 }
-div .icon {
+div.icon {
   margin: auto;
   width: 50%;
   color: red;
@@ -36,6 +36,7 @@ div .icon {
     100% { transform:translateY(0); }
 }
 
+/* Stretch new button */
   .new-button {
     border: 0;
     margin: 0;
@@ -46,3 +47,18 @@ div .icon {
   .new-button:hover {
     cursor: pointer;
   }
+  
+ /* Nav arrow to flip */
+  .fa-angles-up {
+   
+    color: red;
+    animation: fa-angles-up 1s ease infinite;
+  }
+  @keyframes fa-angles-up {
+    30% { transform: scale(1.2); }
+    40%, 60% { transform: rotate(-20deg) scale(1.2); }
+    50% { transform: rotate(20deg) scale(1.2); }
+    70% { transform: rotate(0deg) scale(1.2); }
+    100% { transform: scale(1); }
+  }
+  
