@@ -43,8 +43,8 @@ $(document).ready(function () {
     let $tweet = `<article class="tweet">
    <header class="tweet-header">
      <div class="username">
-       <span><img src = ${tweet.user["avatars"]}</span>
-       <span>${tweet.user["name"]}</span>
+       <span><img src = ${tweet.user["avatars"]}></span>
+       <span class="person">${tweet.user["name"]}</span>
      </div>
      <p class="user-id">${tweet.user["handle"]}</p>
    </header>
@@ -101,21 +101,13 @@ $(document).ready(function () {
 
   ////jQuery to form toggle events(stretch)
   $(".new-button").click(function () {
-    $(".icon").replaceWith($("<i class = 'fa-solid fa-angles-up '><i/>"))
+    $(".fa-angles-down").replaceWith($("<i class = 'fa-solid fa-angles-up '><i/>"))
     $(".scroll-button").fadeOut(1000)
       $(".new-tweet").slideDown("slow").css("display", "block");
-      
-     
+  
+
   });
 ////Scroll events
-// $(window).scroll(function (){
-//   $(".scroll-button").css("display", "block")
-//   $(".scroll-button").click(function(){
-//     window.scrollTo({ top: 0, behavior: 'smooth' })
-//     $(".new-tweet").slideDown("slow").css("display", "block");
-//     $(".scroll-button").fadeOut(1000)
-//   })
-// })
 
 $(window).scroll(function(){
 

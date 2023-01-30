@@ -17,16 +17,23 @@ background-image: url("https://www.transparenttextures.com/patterns/diagmonds.pn
 }
 .right-header {
   margin: 1.5em;
+  display: flex;
+  flex-direction: column;
 }
-div.icon {
+.area {
+  font-weight: 30;
+}
+
+
+.fa-angles-down {
   margin: auto;
   width: 50%;
-  color: red;
+  color: #e94957;
   padding: 0px;
   margin-right: 10px;
- animation: icon 2s ease infinite;
+ animation: fa-angles-down 2s ease infinite;
   }
-  @keyframes icon {
+  @keyframes fa-angles-down {
     70% { transform:translateY(0%); }
     80% { transform:translateY(-15%); }
     90% { transform:translateY(0%); }
@@ -41,7 +48,10 @@ div.icon {
     border: 0;
     margin: 0;
     padding: 0;
-    background-color: #084982;
+    background-color: #006dcc;
+    background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
+
+
     color: #FFFFFF;
   }
   .new-button:hover {
@@ -51,7 +61,7 @@ div.icon {
  /* Nav arrow to flip */
   .fa-angles-up {
    
-    color: red;
+    color: #e42535;
     animation: fa-angles-up 1s ease infinite;
   }
   @keyframes fa-angles-up {

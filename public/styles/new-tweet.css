@@ -52,8 +52,8 @@ textarea {
   border: 1px solid  #084982;
     border-radius: 8px;
     box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
-  padding: 10px;
-  padding-left: 20px;
+  padding: 20px;
+  padding-left: 30px;
  
 }
 .tweet:hover {
@@ -61,6 +61,11 @@ textarea {
 }
 div.username {
   font-weight: 30;
+  display: flex;
+}
+.person {
+  align-self: center;
+  padding-left: 15px;
 }
 
 .user-id {
@@ -73,8 +78,9 @@ div.username {
   justify-content: space-between;
 }
 div.tweet-text {
-  padding-top: 20px;;
-  padding-bottom: 25px;
+  overflow-wrap: break-word;
+  padding-top: 30px;;
+  padding-bottom: 30px;
   border-bottom: solid 2px #084982;
 }
 .tweet-footer {
@@ -83,10 +89,12 @@ div.tweet-text {
   align-items: center;
   margin-top: 10px;
   margin-bottom: 10px;
+  padding-top: 10px;
   font-size: medium;
 }
 .tweet-actions {
-  width: 6%;
+  width: 5%;
+  /* align-items: flex-end; */
   display: flex;
   justify-content: space-between;
   color: #084982;
