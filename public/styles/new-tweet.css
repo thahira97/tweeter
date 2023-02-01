@@ -84,6 +84,7 @@ div.tweet-text {
   border-bottom: solid 2px #084982;
 }
 .tweet-footer {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -93,7 +94,7 @@ div.tweet-text {
   font-size: medium;
 }
 .tweet-actions {
-  width: 5%;
+  width: 8%;
   /* align-items: flex-end; */
   display: flex;
   justify-content: space-between;
@@ -143,3 +144,73 @@ color: goldenrod;
   border-radius: 40%;
   border: 0;
 }
+
+/* Media query for tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px)  {
+  nav {
+    height: 120px;
+    width: 100%;
+    color: #FFFFFF;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+  }
+  .new-button {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+  }
+  .avatar {
+    margin: 100px 0 0 0;
+  }
+  .profile-pic {
+    width : 200px; 
+    height: 200px;
+  }
+
+}
+
+/* Media Query for Desktop */
+@media only screen and (min-width: 1024px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    overflow-x: hidden ;
+  }
+  nav {
+   top: 0;
+ 
+  }
+  header.identity {
+   width: 25%;
+   height: 350px;
+   align-self: flex-start;
+   margin-top: 200px;
+   margin-left: 50px;
+   border-radius: 20px;
+   /* box-shadow: 0 1px 2px rgb(0 0 0 / 20%); */
+   box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+   
+  }
+  .avatar {
+    margin-top: 75px;
+  }
+  .profile-pic {
+    width : 200px; 
+    height: 200px;
+  }
+  .container {
+    max-width: 100% ;
+    overflow-x: hidden ;
+    display: flex;
+    flex-direction: column;
+    margin-top: 160px;
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+  }
+
+ }
+ 
