@@ -148,15 +148,8 @@ color: goldenrod;
 /* Media query for tablets */
 @media only screen and (min-width: 768px) and (max-width: 1023px)  {
   nav {
-    height: 120px;
-    width: 100%;
-    color: #FFFFFF;
     background-color: rgba(0, 0, 0, 0);
     background-image: none;
-    display: flex;
-    justify-content: space-between;
-    position: fixed;
-    z-index: 1;
   }
   .new-button {
     background-color: rgba(0, 0, 0, 0);
@@ -175,9 +168,10 @@ color: goldenrod;
 /* Media Query for Desktop */
 @media only screen and (min-width: 1024px) {
   body {
+    width: 100%;
     display: flex;
     flex-direction: row;
-    overflow-x: hidden ;
+    /* overflow-x: hidden ; */
   }
   nav {
    top: 0;
@@ -202,14 +196,15 @@ color: goldenrod;
     height: 200px;
   }
   .container {
-    max-width: 100% ;
-    overflow-x: hidden ;
+    width: 75%;
+    /* max-width: 100% ;
+    overflow-x: hidden ; */
     display: flex;
     flex-direction: column;
-    margin-top: 160px;
+     margin-top: 160px;
     margin-left: 100px;
     margin-right: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 50px; 
   }
 
  }
