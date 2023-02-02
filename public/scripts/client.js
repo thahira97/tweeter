@@ -82,10 +82,10 @@ $(document).ready(function () {
     if ($tweetInput.length > 140) {
       $longError.css("display", "block").fadeOut(4000);
     }
-    if (!$tweetInput) {
+    else if (!$tweetInput || $tweetInput.trim().length === 0 ) {
       $shortError.css("display", "block").fadeOut(4000);
     }
-    if ($tweetInput.length <= 140 && $tweetInput)
+    else if ($tweetInput.length <= 140 )
       $.post("/tweets", data).then(() => {
         $form.trigger("reset");
         loadTweets();
