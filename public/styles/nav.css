@@ -2,8 +2,8 @@ nav {
   height: 120px;
   width: 100%;
   background-color: #006dcc;
-background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
-  color: #FFFFFF;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
+  color: #ffffff;
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -12,7 +12,7 @@ background-image: url("https://www.transparenttextures.com/patterns/diagmonds.pn
 }
 
 .heading {
-  font-family: 'Bungee';
+  font-family: "Bungee";
   margin: 1.5em;
 }
 .right-header {
@@ -24,51 +24,72 @@ background-image: url("https://www.transparenttextures.com/patterns/diagmonds.pn
   font-weight: 30;
 }
 
-
 .fa-angles-down {
   margin: auto;
   width: 50%;
   color: #e94957;
   padding: 0px;
   margin-right: 10px;
- animation: fa-angles-down 2s ease infinite;
+  animation: fa-angles-down 2s ease infinite;
+}
+@keyframes fa-angles-down {
+  70% {
+    transform: translateY(0%);
   }
-  @keyframes fa-angles-down {
-    70% { transform:translateY(0%); }
-    80% { transform:translateY(-15%); }
-    90% { transform:translateY(0%); }
-    95% { transform:translateY(-7%); }
-    97% { transform:translateY(0%); }
-    99% { transform:translateY(-3%); }
-    100% { transform:translateY(0); }
+  80% {
+    transform: translateY(-15%);
+  }
+  90% {
+    transform: translateY(0%);
+  }
+  95% {
+    transform: translateY(-7%);
+  }
+  97% {
+    transform: translateY(0%);
+  }
+  99% {
+    transform: translateY(-3%);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* Stretch new button */
-  .new-button {
-    border: 0;
-    margin: 0;
-    padding: 0;
-    background-color: #006dcc;
-    background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
+.new-button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: #006dcc;
+  background-image: url("https://www.transparenttextures.com/patterns/diagmonds.png");
 
+  color: #ffffff;
+}
+.new-button:hover {
+  cursor: pointer;
+}
 
-    color: #FFFFFF;
+/* Nav arrow to flip */
+.fa-angles-up {
+  color: #e42535;
+  animation: fa-angles-up 1s ease infinite;
+}
+@keyframes fa-angles-up {
+  30% {
+    transform: scale(1.2);
   }
-  .new-button:hover {
-    cursor: pointer;
+  40%,
+  60% {
+    transform: rotate(-20deg) scale(1.2);
   }
-  
- /* Nav arrow to flip */
-  .fa-angles-up {
-   
-    color: #e42535;
-    animation: fa-angles-up 1s ease infinite;
+  50% {
+    transform: rotate(20deg) scale(1.2);
   }
-  @keyframes fa-angles-up {
-    30% { transform: scale(1.2); }
-    40%, 60% { transform: rotate(-20deg) scale(1.2); }
-    50% { transform: rotate(20deg) scale(1.2); }
-    70% { transform: rotate(0deg) scale(1.2); }
-    100% { transform: scale(1); }
+  70% {
+    transform: rotate(0deg) scale(1.2);
   }
-  
+  100% {
+    transform: scale(1);
+  }
+}

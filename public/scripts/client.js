@@ -112,8 +112,10 @@ $(document).ready(function () {
 $(window).scroll(function(){
 
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    $(".right-header").css("visibility", "hidden")
    $(".scroll-button").css("display", "block")
   } else {
+    $(".right-header").css("visibility", "visible")
     $(".scroll-button").css("display", "none")
   }
 
@@ -123,6 +125,9 @@ $(window).scroll(function(){
 
 $(".scroll-button").click(function(){
       window.scrollTo({ top: 0, behavior: 'smooth' })
+      
+      $(".right-header").css("visibility", "visible")
+      $(".fa-angles-down").replaceWith($("<i class = 'fa-solid fa-angles-up '><i/>"))
       $(".new-tweet").slideDown("slow").css("display", "block");
       $(".scroll-button").fadeOut(1000)
     })
