@@ -146,12 +146,29 @@ color: goldenrod;
 }
 /* Media query for phones */
 @media only screen and (min-width: 320px) and (max-width: 420px) {
+  .new-button {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+    padding-right: 40px;
+
+  }
+  .profile-pic {
+    width : 150px; 
+    height: 150px;
+  }
+  .avatar {
+    padding-top: 50px;
+  }
+  .tweet-actions{
+    width: 20%;
+  }
+  .tweet-header{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
   
 }
-
-
-
-
 
 
 /* Media query for tablets */
@@ -171,7 +188,10 @@ color: goldenrod;
     width : 200px; 
     height: 200px;
   }
-
+  .tweet-actions{
+    width: 20%;
+  }
+ 
 }
 
 /* Media Query for Desktop */
@@ -216,7 +236,9 @@ color: goldenrod;
     margin-right: 50px;
     margin-bottom: 50px; 
   }
-
+  .tweet-actions{
+    width: 10%;
+  }
 
  }
  
