@@ -13,22 +13,22 @@ This repository is the starter code for the project: Students will fork and clon
 4. Go to <http://localhost:8080/> in your browser.
 
 ## Final Product
-![Tweeter Home page](tweeter/docs/Tweeter-Homepage.png)
+![Tweeter Home page](/docs/Tweeter-Homepage.png)
 The Tweeter is a single page app with a form where you can write & submit your tweet and you can see see your newly created tweets right below the form.
 
-![Error when no input](tweeter/docs/ShortError.png)
+![Error when no input](/docs/ShortError.png)
 Shows Error when the user tries to submit the form with no Inputs
 
-![Error when over the limit of characters](tweeter/docs/LongError.png)
+![Error when over the limit of characters](/docs/LongError.png)
 Shows Error when the user tries to submit the form with Inputs over the limit of characters mentioned in the counter
 
 Tweeter with a mobile friendly designs
-![Mobile-view](tweeter/docs/Mobile.png)
-![Tablet-view](tweeter/docs/Tablet.png)
+![Mobile-view](/docs/Mobile.png)
+![Tablet-view](/docs/Tablet.png)
 
 GIFS of how tweeter works with responsive design
-![tweeter home page gif](tweeter/docs/Tweeter-Homepage.png)
-![tweeter laptop to tablet and mobile gif](tweeter/docs/Tweeter-ResponsiveDesign.gif)
+![tweeter home page gif](/docs/Tweeter-Homepage.png)
+![tweeter laptop to tablet and mobile gif](/docs/Tweeter-ResponsiveDesign.gif)
 
 
 ## Dependencies
