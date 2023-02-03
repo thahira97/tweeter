@@ -34,3 +34,21 @@ main {
   width: 90%;
   background-color: #f4f1ec;
 }
+
+/* Media Query for Desktop */
+@media only screen and (min-width: 1024px) {
+  body {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 128px;
+    margin-left: 100px;
+    margin-right: 50px;
+    margin-bottom: 50px;
+  }
+}

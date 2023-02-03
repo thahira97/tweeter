@@ -14,14 +14,12 @@ nav {
 .heading {
   font-family: "Bungee";
   margin: 1.5em;
-
 }
 .right-header {
   margin-top: 1.5em;
   margin-right: 1.5em;
   display: flex;
   flex-direction: column;
-
 }
 .area {
   font-weight: 30;
@@ -94,5 +92,36 @@ nav {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+/* Media query for phones */
+@media only screen and (min-width: 320px) and (max-width: 420px) {
+  .right-header {
+    margin-right: 1.5rem;
+  }
+  .new-button {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+    padding-right: 40px;
+  }
+}
+
+/* Media query for tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  nav {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+  }
+  .new-button {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none;
+  }
+}
+
+/* Media Query for Desktop */
+@media only screen and (min-width: 1024px) {
+  nav {
+    top: 0;
   }
 }

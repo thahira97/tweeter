@@ -144,18 +144,6 @@ div.tweet-text {
 }
 /* Media query for phones */
 @media only screen and (min-width: 320px) and (max-width: 420px) {
-  .new-button {
-    background-color: rgba(0, 0, 0, 0);
-    background-image: none;
-    padding-right: 40px;
-  }
-  .profile-pic {
-    width: 150px;
-    height: 150px;
-  }
-  .avatar {
-    padding-top: 50px;
-  }
   .tweet-actions {
     width: 20%;
   }
@@ -164,33 +152,14 @@ div.tweet-text {
     flex-direction: column;
     align-items: flex-start;
   }
-  .tweet{
+  .tweet {
     margin-top: 30px;
     padding: 10px;
-  }
-
-  .right-header {
-    margin-right: 1.5rem;
   }
 }
 
 /* Media query for tablets */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-  nav {
-    background-color: rgba(0, 0, 0, 0);
-    background-image: none;
-  }
-  .new-button {
-    background-color: rgba(0, 0, 0, 0);
-    background-image: none;
-  }
-  .avatar {
-    margin: 100px 0 0 0;
-  }
-  .profile-pic {
-    width: 200px;
-    height: 200px;
-  }
   .tweet-actions {
     width: 15%;
   }
@@ -198,47 +167,13 @@ div.tweet-text {
 
 /* Media Query for Desktop */
 @media only screen and (min-width: 1024px) {
-  body {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-  }
-  nav {
-    top: 0;
-  }
-  header.identity {
-    width: 40vw;
-    height: 350px;
-    align-self: flex-start;
-    margin-top: 175px;
-    margin-left: 50px;
-    border-radius: 20px;
-    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
-      rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
-  }
-  .avatar {
-    margin-top: 65px;
-  }
-  .profile-pic {
-    width: 200px;
-    height: 200px;
-  }
-  .container {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    margin-top: 128px;
-    margin-left: 100px;
-    margin-right: 50px;
-    margin-bottom: 50px;
-  }
   .tweet-actions {
     width: 10%;
   }
   .question {
     padding-top: 0;
   }
-  .new-tweetform{
+  .new-tweetform {
     margin-top: 48px;
   }
 }
