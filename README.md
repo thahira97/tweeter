@@ -27,7 +27,7 @@ Tweeter with a mobile friendly designs
 ![Tablet-view](/docs/Tablet.png)
 
 GIFS of how tweeter works with responsive design
-![tweeter home page gif](/docs/Tweeter-Homepage.png)
+![tweeter home page gif](/docs/Tweeter-1.gif)
 ![tweeter laptop to tablet and mobile gif](/docs/Tweeter-ResponsiveDesign.gif)
 
 
