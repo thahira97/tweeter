@@ -9,7 +9,6 @@ $(document).ready(function () {
     const $tweetsContainer = $("#tweets-container");
     for (const tweet of tweets) {
       const $tweet = createTweetElement(tweet);
-      // $tweetsContainer.empty();
       $tweetsContainer.prepend($tweet);
     }
   };
@@ -17,7 +16,6 @@ $(document).ready(function () {
   ////Function to fetch tweets
   const loadTweets = function () {
     $.get("http://localhost:8080/tweets").then((response) => {
-      // console.log(response)
       renderTweets(response);
     });
   };

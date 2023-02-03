@@ -94,7 +94,6 @@ div.tweet-text {
 }
 .tweet-actions {
   width: 8%;
-  /* align-items: flex-end; */
   display: flex;
   justify-content: space-between;
   color: #084982;
@@ -117,7 +116,6 @@ div.tweet-text {
   margin: 5px 5px;
   text-align: center;
   padding: 20px;
-  /* visibility: hidden; */
   display: none;
 }
 .short-error {
@@ -166,6 +164,10 @@ div.tweet-text {
     flex-direction: column;
     align-items: flex-start;
   }
+  .tweet{
+    margin-top: 30px;
+    padding: 10px;
+  }
 
   .right-header {
     margin-right: 1.5rem;
@@ -205,10 +207,10 @@ div.tweet-text {
     top: 0;
   }
   header.identity {
-    width: 45vw;
+    width: 40vw;
     height: 350px;
     align-self: flex-start;
-    margin-top: 200px;
+    margin-top: 175px;
     margin-left: 50px;
     border-radius: 20px;
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
@@ -222,10 +224,10 @@ div.tweet-text {
     height: 200px;
   }
   .container {
-    width: 55%;
+    width: 60%;
     display: flex;
     flex-direction: column;
-    margin-top: 150px;
+    margin-top: 128px;
     margin-left: 100px;
     margin-right: 50px;
     margin-bottom: 50px;
@@ -237,6 +239,6 @@ div.tweet-text {
     padding-top: 0;
   }
   .new-tweetform{
-    margin-top: 50px;
+    margin-top: 48px;
   }
 }
