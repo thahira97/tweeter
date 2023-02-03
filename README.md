@@ -14,7 +14,7 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 ![Tweeter Home page](/docs/Tweeter-Homepage.png)
-The Tweeter is a single page app with a form where you can write & submit your tweet and you can see see your newly created tweets right below the form.
+The Tweeter is a single page app with a form where you can write & submit your tweet and you can see your newly created tweets right below the form.
 
 ![Error when no input](/docs/ShortError.png)
 Shows Error when the user tries to submit the form with no Inputs
@@ -22,7 +22,7 @@ Shows Error when the user tries to submit the form with no Inputs
 ![Error when over the limit of characters](/docs/LongError.png)
 Shows Error when the user tries to submit the form with Inputs over the limit of characters mentioned in the counter
 
-Tweeter with a mobile friendly designs
+Tweeter with a mobile and tablet friendly designs
 ![Mobile-view](/docs/Mobile.png)
 ![Tablet-view](/docs/Tablet.png)
 
