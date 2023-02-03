@@ -53,7 +53,7 @@ textarea {
   border-radius: 8px;
   box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
   padding: 20px;
-  padding-left: 30px;
+  /* padding-left: 30px; */
 }
 .tweet:hover {
   box-shadow: 10px 5px 5px #c2c2c7;
@@ -78,8 +78,8 @@ div.username {
 }
 div.tweet-text {
   overflow-wrap: break-word;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   border-bottom: solid 2px #084982;
 }
 .tweet-footer {
@@ -103,7 +103,7 @@ div.tweet-text {
   color: goldenrod;
 }
 .fa-retweet:hover {
-  color: rgb(14, 177, 124 );
+  color: rgb(14, 177, 124);
 }
 .fa-heart:hover {
   color: #ae2516;
@@ -112,6 +112,7 @@ div.tweet-text {
 /* Error-messages */
 .long-error {
   color: red;
+  background-color: #f6c4c0;
   border: solid 2px red;
   margin: 5px 5px;
   text-align: center;
@@ -121,6 +122,7 @@ div.tweet-text {
 }
 .short-error {
   color: red;
+  background-color: #f6c4c0;
   border: solid 2px red;
   margin: 5px 5px;
   text-align: center;
@@ -164,6 +166,10 @@ div.tweet-text {
     flex-direction: column;
     align-items: flex-start;
   }
+
+  .right-header {
+    margin-right: 1.5rem;
+  }
 }
 
 /* Media query for tablets */
@@ -191,45 +197,46 @@ div.tweet-text {
 /* Media Query for Desktop */
 @media only screen and (min-width: 1024px) {
   body {
-    box-sizing: border-box;
     width: 100%;
     display: flex;
     flex-direction: row;
-    /* overflow-x: hidden ; */
   }
   nav {
     top: 0;
   }
   header.identity {
-    width: 25vw;
-    height: 400px;
+    width: 45vw;
+    height: 350px;
     align-self: flex-start;
     margin-top: 200px;
     margin-left: 50px;
     border-radius: 20px;
-    /* box-shadow: 0 1px 2px rgb(0 0 0 / 20%); */
     box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
       rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
   }
   .avatar {
-    margin-top: 75px;
+    margin-top: 65px;
   }
   .profile-pic {
     width: 200px;
     height: 200px;
   }
   .container {
-    max-width: 65%;
-    /* overflow-x: hidden ; */
+    width: 55%;
     display: flex;
     flex-direction: column;
-    padding-left: 50px;
-    margin-top: 160px;
+    margin-top: 150px;
     margin-left: 100px;
     margin-right: 50px;
     margin-bottom: 50px;
   }
   .tweet-actions {
     width: 10%;
+  }
+  .question {
+    padding-top: 0;
+  }
+  .new-tweetform{
+    margin-top: 50px;
   }
 }

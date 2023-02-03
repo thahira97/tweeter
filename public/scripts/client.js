@@ -4,30 +4,6 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function () {
-  // const data = [
-  //   {
-  //     user: {
-  //       name: "Newton",
-  //       avatars: "https://i.imgur.com/73hZDYK.png",
-  //       handle: "@SirIsaac",
-  //     },
-  //     content: {
-  //       text: "If I have seen further it is by standing on the shoulders of giants",
-  //     },
-  //     created_at: 1461116232227,
-  //   },
-  //   {
-  //     user: {
-  //       name: "Descartes",
-  //       avatars: "https://i.imgur.com/nlhLi3I.png",
-  //       handle: "@rd",
-  //     },
-  //     content: {
-  //       text: "Je pense , donc je suis",
-  //     },
-  //     created_at: 1461113959088,
-  //   },
-  // ];
   ///Function to render the tweets
   const renderTweets = function (tweets) {
     const $tweetsContainer = $("#tweets-container");
@@ -36,6 +12,14 @@ $(document).ready(function () {
       // $tweetsContainer.empty();
       $tweetsContainer.prepend($tweet);
     }
+  };
+
+  ////Function to fetch tweets
+  const loadTweets = function () {
+    $.get("http://localhost:8080/tweets").then((response) => {
+      // console.log(response)
+      renderTweets(response);
+    });
   };
 
   ///Function to create one tweet
@@ -69,6 +53,9 @@ $(document).ready(function () {
     return div.innerHTML;
   };
 
+  //// To initially populate the page with old tweets
+  loadTweets();
+
   /////Event Listener for Submit form and Ajax request for post
   const $form = $(".new-tweetform");
   $form.submit(function (event) {
@@ -81,54 +68,48 @@ $(document).ready(function () {
     const $shortError = $(".short-error");
     if ($tweetInput.length > 140) {
       $longError.css("display", "block").fadeOut(4000);
-    }
-    else if (!$tweetInput || $tweetInput.trim().length === 0 ) {
+    } else if (!$tweetInput || $tweetInput.trim().length === 0) {
       $shortError.css("display", "block").fadeOut(4000);
-    }
-    else if ($tweetInput.length <= 140 )
+    } else if ($tweetInput.length <= 140)
       $.post("/tweets", data).then(() => {
         $form.trigger("reset");
         loadTweets();
       });
   });
-  ////Function to fetch tweets
-  const loadTweets = function () {
-    $.get("http://localhost:8080/tweets").then((response) => {
-      // console.log(response)
-      renderTweets(response);
-    });
-  };
 
   ////jQuery to form toggle events(stretch)
   $(".new-button").click(function () {
-    $(".fa-angles-down").replaceWith($("<i class = 'fa-solid fa-angles-up '><i/>"))
-    $(".scroll-button").fadeOut(1000)
-      $(".new-tweet").slideDown("slow").css("display", "block");
-  
-
+    $(".fa-angles-down").replaceWith(
+      $("<i class = 'fa-solid fa-angles-up '><i/>")
+    );
+    $(".scroll-button").fadeOut(1000);
+    $(".new-tweet").slideDown("slow").css("display", "block");
   });
-////Scroll events
+  ////Scroll events
 
-$(window).scroll(function(){
+  $(window).scroll(function () {
+    if (
+      document.body.scrollTop > 20 ||
+      document.documentElement.scrollTop > 20
+    ) {
+      $(".right-header").css("visibility", "hidden");
+      $(".scroll-button").css("display", "block");
+    } else {
+      $(".right-header").css("visibility", "visible");
+      $(".scroll-button").css("display", "none");
+    }
+  });
 
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    $(".right-header").css("visibility", "hidden")
-   $(".scroll-button").css("display", "block")
-  } else {
-    $(".right-header").css("visibility", "visible")
-    $(".scroll-button").css("display", "none")
-  }
+  ///When the user clicks on the button, scroll to the top
 
-})
+  $(".scroll-button").click(function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
 
-///When the user clicks on the button, scroll to the top 
-
-$(".scroll-button").click(function(){
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-      
-      $(".right-header").css("visibility", "visible")
-      $(".fa-angles-down").replaceWith($("<i class = 'fa-solid fa-angles-up '><i/>"))
-      $(".new-tweet").slideDown("slow").css("display", "block");
-      $(".scroll-button").fadeOut(1000)
-    })
+    // $(".right-header").css("visibility", "visible");
+    $(".fa-angles-down").replaceWith(
+      $("<i class = 'fa-solid fa-angles-up '><i/>")
+    );
+    $(".new-tweet").slideDown("slow").css("display", "block");
+    $(".scroll-button").fadeOut(1000);
+  });
 });
